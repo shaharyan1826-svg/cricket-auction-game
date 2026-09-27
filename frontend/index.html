@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Auction Night — T20 Mega Auction</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <h1>Auction <em>Night</em></h1>
+    <span class="tag">🔨 Custom T20 Mega Auction</span>
+  </header>
+
+  <nav class="tabs">
+    <button data-view="setup" class="active">Setup</button>
+    <button data-view="auction" disabled>Auction</button>
+    <button data-view="teams" disabled>Squads</button>
+    <button data-view="summary" disabled>Summary</button>
+    <button data-view="lineup" disabled>Playing XI</button>
+    <button data-view="ratings" disabled>Ratings</button>
+  </nav>
+
+  <div id="errorBox" class="error-msg"></div>
+
+  <!-- SETUP -->
+  <section class="view active" id="view-setup">
+    <div class="panel">
+      <h2>Set the rules of the room</h2>
+      <div class="grid-2">
+        <div class="field">
+          <label>Number of teams</label>
+          <input type="number" id="numTeams" min="2" max="12" value="4" />
+        </div>
+        <div class="field">
+          <label>Budget per team ($)</label>
+          <input type="number" id="budget" min="1" value="100" />
+        </div>
+        <div class="field">
+          <label>Squad size per team</label>
+          <input type="number" id="squadSize" min="1" value="11" />
+        </div>
+        <div class="field">
+          <label>Number of auction players</label>
+          <input type="number" id="numPlayers" min="1" value="60" />
+        </div>
+        <div class="field">
+          <label>Base price ($)</label>
+          <input type="number" id="basePrice" min="1" value="2" />
+        </div>
+        <div class="field">
+          <label>Nationality rule</label>
+          <select id="nationalityRule">
+            <option value="none">No restriction (mixed pool)</option>
+            <option value="indian-only">Indian players only</option>
+            <option value="overseas-only">Overseas players only</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Max overseas players per squad (optional)</label>
+          <input type="number" id="overseasCap" min="0" placeholder="No cap" />
+        </div>
+      </div>
+
+      <div class="field" style="margin-top:.5rem;">
+        <label>Team names</label>
+        <div id="teamNamesList"></div>
+      </div>
+
+      <button class="btn primary" id="startBtn">Start the auction</button>
+    </div>
+  </section>
+
+  <!-- AUCTION -->
+  <section class="view" id="view-auction">
+    <div id="lotBlock"></div>
+    <div class="panel">
+      <h2>Place a bid</h2>
+      <div class="team-bid-grid" id="teamBidGrid"></div>
+      <div class="unsold-row">
+        <button class="btn ghost" id="unsoldBtn">❌ Mark unsold</button>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Live table</h2>
+      <div class="table-wrap"><table id="liveTable"></table></div>
+    </div>
+  </section>
+
+  <!-- TEAMS / SQUADS -->
+  <section class="view" id="view-teams">
+    <div class="panel">
+      <h2>Complete team lists</h2>
+      <div class="squad-grid" id="squadGrid"></div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="view" id="view-summary">
+    <div class="panel">
+      <h2>🏆 Final auction summary</h2>
+      <div class="table-wrap"><table id="summaryTable"></table></div>
+    </div>
+    <div class="panel">
+      <h2>❌ Unsold players</h2>
+      <div id="unsoldListBox"></div>
+      <button class="btn" id="startUnsoldRoundBtn" style="margin-top:1rem;">Run unsold player round</button>
+      <button class="btn ghost" id="skipToLineupBtn" style="margin-top:1rem;">Skip to Playing XI →</button>
+    </div>
+  </section>
+
+  <!-- LINEUP -->
+  <section class="view" id="view-lineup">
+    <div class="panel">
+      <h2>Build each Playing XI</h2>
+      <p style="color:var(--cream-dim); font-size:.85rem; margin-top:-.5rem;">
+        Reorder with the arrows, then save. Roles are detected automatically.
+      </p>
+      <div id="lineupBuilder"></div>
+    </div>
+  </section>
+
+  <!-- RATINGS -->
+  <section class="view" id="view-ratings">
+    <div class="panel">
+      <h2>⭐ T20 team ratings</h2>
+      <div id="ratingsBox"></div>
+    </div>
+    <div class="panel">
+      <h2>Final comparison</h2>
+      <div class="table-wrap"><table id="compareTable"></table></div>
+    </div>
+  </section>
+
+  <footer class="credits">Self-hosted auction engine — no data leaves your server.</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
