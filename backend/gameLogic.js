@@ -51,8 +51,41 @@ function teamsWithOpenSlot() {
   return game.teams.filter((t) => t.squad.length < game.settings.squadSize);
 }
 
+function canTeamBuyPlayer(team, player) {
+  // Team is already full
+  if (team.squad.length >= game.settings.squadSize) {
+    return false;
+  }
+
+  // Not enough money
+  if (team.remaining < player.basePrice) {
+    return false;
+  }
+
+  // User-defined overseas limit
+  const cap = game.settings.overseasCap;
+
+  if (
+    cap != null &&
+    player.nationality === "OV" &&
+    team.overseasCount >= cap
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
 function advanceMainAuction() {
   game.poolIndex += 1;
+
+  // Stop auction if all teams have completed their squads
+  if (teamsWithOpenSlot().length === 0) {
+    game.phase = "summary";
+    game.currentPlayer = null;
+    return;
+  }
+
   if (game.poolIndex >= game.pool.length) {
     // Main auction done.
     maybeStartUnsoldRoundOrSummary();
@@ -60,6 +93,8 @@ function advanceMainAuction() {
     game.currentPlayer = game.pool[game.poolIndex];
   }
 }
+
+
 
 function maybeStartUnsoldRoundOrSummary() {
   const needMore = teamsWithOpenSlot().length > 0 && game.unsoldList.length > 0;
