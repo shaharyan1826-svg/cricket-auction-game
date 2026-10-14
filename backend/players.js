@@ -8,7 +8,6 @@ const REAL_PLAYERS = [
   { name: "Virat Kohli", nationality: "IN", role: "Opener", attrs: {bat:10,pow:8,fin:7,bowl:1,pace:1,spin:1,keep:1} },
   { name: "Shubman Gill", nationality: "IN", role: "Opener", attrs: {bat:9,pow:7,fin:5,bowl:1,pace:1,spin:1,keep:1} },
   { name: "Yashasvi Jaiswal", nationality: "IN", role: "Opener", attrs: {bat:9,pow:8,fin:6,bowl:1,pace:1,spin:1,keep:1} },
-  { name: "Ruturaj Gaikwad", nationality: "IN", role: "Opener", attrs: {bat:8,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:1} },
   { name: "Suryakumar Yadav", nationality: "IN", role: "Middle Order", attrs: {bat:9,pow:10,fin:9,bowl:1,pace:1,spin:1,keep:1} },
   { name: "Rishabh Pant", nationality: "IN", role: "Wicketkeeper", attrs: {bat:8,pow:9,fin:8,bowl:1,pace:1,spin:1,keep:9} },
   { name: "Sanju Samson", nationality: "IN", role: "Wicketkeeper", attrs: {bat:8,pow:9,fin:8,bowl:1,pace:1,spin:1,keep:8} },
@@ -34,7 +33,6 @@ const REAL_PLAYERS = [
   { name: "Ravichandran Ashwin", nationality: "IN", role: "All-rounder", attrs: {bat:5,pow:4,fin:4,bowl:8,pace:1,spin:10,keep:1} },
   { name: "Krunal Pandya", nationality: "IN", role: "All-rounder", attrs: {bat:6,pow:7,fin:7,bowl:7,pace:1,spin:8,keep:1} },
   { name: "Venkatesh Iyer", nationality: "IN", role: "All-rounder", attrs: {bat:7,pow:8,fin:8,bowl:5,pace:6,spin:1,keep:1} },
-  { name: "Rahul Tewatia", nationality: "IN", role: "All-rounder", attrs: {bat:6,pow:8,fin:9,bowl:5,pace:1,spin:7,keep:1} },
   { name: "Deepak Hooda", nationality: "IN", role: "All-rounder", attrs: {bat:6,pow:7,fin:7,bowl:4,pace:1,spin:6,keep:1} },
   { name: "Abhishek Sharma", nationality: "IN", role: "All-rounder", attrs: {bat:8,pow:9,fin:8,bowl:6,pace:1,spin:8,keep:1} },
   { name: "Riyan Parag", nationality: "IN", role: "All-rounder", attrs: {bat:7,pow:8,fin:8,bowl:6,pace:1,spin:7,keep:1} },
@@ -49,13 +47,38 @@ const REAL_PLAYERS = [
   { name: "Rajat Patidar", nationality: "IN", role: "Middle Order", attrs: {bat:8,pow:9,fin:8,bowl:1,pace:1,spin:1,keep:1} },
   { name: "Dhruv Jurel", nationality: "IN", role: "Wicketkeeper", attrs: {bat:8,pow:8,fin:8,bowl:1,pace:1,spin:1,keep:8} },
   { name: "Shashank Singh", nationality: "IN", role: "Finisher", attrs: {bat:7,pow:8,fin:9,bowl:4,pace:5,spin:1,keep:1} },
-  { name: "Shahrukh Khan", nationality: "IN", role: "Finisher", attrs: {bat:7,pow:10,fin:9,bowl:1,pace:1,spin:1,keep:1} },
   { name: "Prabhsimran Singh", nationality: "IN", role: "Wicketkeeper", attrs: {bat:7,pow:8,fin:8,bowl:1,pace:1,spin:1,keep:8} },
   { name: "Bhuvneshwar Kumar", nationality: "IN", role: "Fast Bowler", attrs: {bat:3,pow:2,fin:2,bowl:9,pace:8,spin:1,keep:1} },
   { name: "Deepak Chahar", nationality: "IN", role: "Fast Bowler", attrs: {bat:4,pow:4,fin:4,bowl:8,pace:7,spin:1,keep:1} },
   { name: "Ravi Bishnoi", nationality: "IN", role: "Spinner", attrs: {bat:2,pow:2,fin:1,bowl:9,pace:1,spin:9,keep:1} },
   { name: "Mayank Yadav", nationality: "IN", role: "Fast Bowler", attrs: {bat:1,pow:1,fin:1,bowl:9,pace:10,spin:1,keep:1} },
   { name: "Shardul Thakur", nationality: "IN", role: "All-rounder", attrs: {bat:5,pow:6,fin:6,bowl:7,pace:8,spin:1,keep:1} },
+  { name: "Prithvi Shaw", nationality: "IN", role: "Opener", attrs: {bat:7,pow:8,fin:6,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Devdutt Padikkal", nationality: "IN", role: "Opener", attrs: {bat:8,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Abhishek Porel", nationality: "IN", role: "Wicketkeeper", attrs: {bat:7,pow:8,fin:7,bowl:1,pace:1,spin:1,keep:7} },
+  { name: "Sarfaraz Khan", nationality: "IN", role: "Middle Order", attrs: {bat:7,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Manish Pandey", nationality: "IN", role: "Middle Order", attrs: {bat:7,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Anuj Rawat", nationality: "IN", role: "Wicketkeeper", attrs: {bat:6,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:7} },
+  { name: "Abhinav Manohar", nationality: "IN", role: "Wicketkeeper", attrs: {bat:5,pow:6,fin:5,bowl:1,pace:1,spin:1,keep:5} },
+  { name: "Mayank Agarwal", nationality: "IN", role: "Opener", attrs: {bat:7,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Karun Nair", nationality: "IN", role: "Middle Order", attrs: {bat:6,pow:6,fin:5,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Nehal Wadhera", nationality: "IN", role: "Middle Order", attrs: {bat:7,pow:8,fin:7,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Sameer Rizvi", nationality: "IN", role: "Middle Order", attrs: {bat:6,pow:8,fin:7,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Ashutosh Sharma", nationality: "IN", role: "Finisher", attrs: {bat:6,pow:9,fin:8,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Ramandeep Singh", nationality: "IN", role: "All-rounder", attrs: {bat:6,pow:8,fin:8,bowl:5,pace:6,spin:1,keep:1} },
+  { name: "Vijaykumar Vyshak", nationality: "IN", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:2,bowl:7,pace:8,spin:1,keep:1} },
+  { name: "Avesh Khan", nationality: "IN", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:1,bowl:8,pace:8,spin:1,keep:1} },
+  { name: "T Natarajan", nationality: "IN", role: "Fast Bowler", attrs: {bat:1,pow:1,fin:1,bowl:8,pace:8,spin:1,keep:1} },
+  { name: "Mukesh Kumar", nationality: "IN", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:2,bowl:7,pace:7,spin:1,keep:1} },
+  { name: "Akash Deep", nationality: "IN", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:2,bowl:7,pace:7,spin:1,keep:1} },
+  { name: "Sandeep Sharma", nationality: "IN", role: "Fast Bowler", attrs: {bat:2,pow:1,fin:1,bowl:8,pace:7,spin:1,keep:1} },
+  { name: "Varun Chakravarthy", nationality: "IN", role: "Spinner", attrs: {bat:2,pow:2,fin:1,bowl:9,pace:1,spin:9,keep:1} },
+  { name: "Rahul Chahar", nationality: "IN", role: "Spinner", attrs: {bat:2,pow:2,fin:1,bowl:8,pace:1,spin:8,keep:1} },
+  { name: "Sai Kishore", nationality: "IN", role: "Spinner", attrs: {bat:3,pow:2,fin:1,bowl:8,pace:1,spin:9,keep:1} },
+  { name: "Mayank Markande", nationality: "IN", role: "Spinner", attrs: {bat:2,pow:2,fin:1,bowl:7,pace:1,spin:8,keep:1} },
+  { name: "Shreyas Gopal", nationality: "IN", role: "Spinner", attrs: {bat:2,pow:2,fin:1,bowl:7,pace:1,spin:8,keep:1} },
+  { name: "Mahipal Lomror", nationality: "IN", role: "All-rounder", attrs: {bat:5,pow:7,fin:6,bowl:3,pace:1,spin:4,keep:1} },
+
 
   // Australia
   { name: "Travis Head", nationality: "OV", role: "Opener", attrs: {bat:9,pow:10,fin:8,bowl:1,pace:1,spin:1,keep:1} },
@@ -68,6 +91,7 @@ const REAL_PLAYERS = [
   { name: "Steve Smith", nationality: "OV", role: "Middle Order", attrs: {bat:8,pow:6,fin:6,bowl:2,pace:1,spin:3,keep:1} },
   { name: "Marcus Stoinis", nationality: "OV", role: "All-rounder", attrs: {bat:8,pow:9,fin:9,bowl:6,pace:7,spin:1,keep:1} },
   { name: "Tim David", nationality: "OV", role: "Finisher", attrs: {bat:7,pow:10,fin:10,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Alex Carey", nationality: "OV", role: "Wicketkeeper", attrs: {bat:7,pow:7,fin:6,bowl:1,pace:1,spin:1,keep:8} },
 
   // England
   { name: "Jos Buttler", nationality: "OV", role: "Wicketkeeper", attrs: {bat:9,pow:10,fin:9,bowl:1,pace:1,spin:1,keep:9} },
@@ -77,6 +101,10 @@ const REAL_PLAYERS = [
   { name: "Jofra Archer", nationality: "OV", role: "Fast Bowler", attrs: {bat:3,pow:2,fin:2,bowl:9,pace:10,spin:1,keep:1} },
   { name: "Sam Curran", nationality: "OV", role: "All-rounder", attrs: {bat:6,pow:7,fin:8,bowl:7,pace:7,spin:1,keep:1} },
   { name: "Jacob Bethell", nationality: "OV", role: "All-rounder", attrs: {bat:7,pow:8,fin:8,bowl:6,pace:1,spin:7,keep:1} },
+  { name: "Moeen Ali", nationality: "OV", role: "All-rounder", attrs: {bat:7,pow:8,fin:7,bowl:7,pace:1,spin:8,keep:1} },
+  { name: "Chris Woakes", nationality: "OV", role: "All-rounder", attrs: {bat:5,pow:5,fin:5,bowl:8,pace:8,spin:1,keep:1} },
+  { name: "Joe Root", nationality: "OV", role: "Middle Order", attrs: {bat:9,pow:6,fin:6,bowl:3,pace:1,spin:4,keep:1} },
+  { name: "Jonny Bairstow", nationality: "OV", role: "Wicketkeeper", attrs: {bat:8,pow:9,fin:8,bowl:1,pace:1,spin:1,keep:8} },
 
   // West Indies
   { name: "Andre Russell", nationality: "OV", role: "All-rounder", attrs: {bat:8,pow:10,fin:10,bowl:7,pace:8,spin:1,keep:1} },
@@ -85,6 +113,11 @@ const REAL_PLAYERS = [
   { name: "Rovman Powell", nationality: "OV", role: "Finisher", attrs: {bat:7,pow:9,fin:9,bowl:3,pace:1,spin:2,keep:1} },
   { name: "Sunil Narine", nationality: "OV", role: "All-rounder", attrs: {bat:7,pow:8,fin:8,bowl:9,pace:1,spin:10,keep:1} },
   { name: "Jason Holder", nationality: "OV", role: "All-rounder", attrs: {bat:6,pow:7,fin:7,bowl:8,pace:8,spin:1,keep:1} },
+  { name: "Brandon King", nationality: "OV", role: "Opener", attrs: {bat:7,pow:8,fin:6,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Akeal Hosein", nationality: "OV", role: "Spinner", attrs: {bat:3,pow:3,fin:2,bowl:8,pace:1,spin:9,keep:1} },
+  { name: "Romario Shepherd", nationality: "OV", role: "All-rounder", attrs: {bat:5,pow:8,fin:7,bowl:6,pace:7,spin:1,keep:1} },     
+  {name: "Shai Hope",nationality: "OV",role: "Wicketkeeper",attrs: {bat: 8,pow: 7,fin: 7,bowl: 1,pace: 1,spin: 1,keep: 8}},
+
 
   // South Africa
   { name: "Quinton de Kock", nationality: "OV", role: "Wicketkeeper", attrs: {bat:9,pow:9,fin:8,bowl:1,pace:1,spin:1,keep:9} },
@@ -96,6 +129,8 @@ const REAL_PLAYERS = [
   { name: "Anrich Nortje", nationality: "OV", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:2,bowl:8,pace:10,spin:1,keep:1} },
   { name: "Gerald Coetzee", nationality: "OV", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:2,bowl:8,pace:9,spin:1,keep:1} },
   { name: "Dewald Brevis", nationality: "OV", role: "Middle Order", attrs: {bat:7,pow:10,fin:8,bowl:4,pace:1,spin:6,keep:1} },
+  { name: "Faf du Plessis", nationality: "OV", role: "Opener", attrs: {bat:8,pow:8,fin:7,bowl:1,pace:1,spin:1,keep:1} },
+
 
   // New Zealand
   { name: "Kane Williamson", nationality: "OV", role: "Middle Order", attrs: {bat:9,pow:6,fin:6,bowl:1,pace:1,spin:2,keep:1} },
@@ -105,6 +140,12 @@ const REAL_PLAYERS = [
   { name: "Rachin Ravindra", nationality: "OV", role: "All-rounder", attrs: {bat:8,pow:8,fin:8,bowl:6,pace:1,spin:8,keep:1} },
   { name: "Glenn Phillips", nationality: "OV", role: "Middle Order", attrs: {bat:8,pow:9,fin:9,bowl:5,pace:1,spin:7,keep:6} },
   { name: "Lockie Ferguson", nationality: "OV", role: "Fast Bowler", attrs: {bat:2,pow:2,fin:2,bowl:8,pace:10,spin:1,keep:1} },
+  { name: "Daryl Mitchell", nationality: "OV", role: "All-rounder", attrs: {bat:8,pow:8,fin:7,bowl:5,pace:5,spin:1,keep:1} },
+  { name: "Mark Chapman", nationality: "OV", role: "Middle Order", attrs: {bat:7,pow:8,fin:7,bowl:1,pace:1,spin:3,keep:1} },
+  { name: "Kyle Jamieson", nationality: "OV", role: "Fast Bowler", attrs: {bat:3,pow:4,fin:3,bowl:8,pace:9,spin:1,keep:1} },
+  { name: "Adam Milne", nationality: "OV", role: "Fast Bowler", attrs: {bat:1,pow:1,fin:1,bowl:8,pace:9,spin:1,keep:1} },
+  { name: "Martin Guptill", nationality: "OV", role: "Opener", attrs: {bat:8,pow:9,fin:7,bowl:1,pace:1,spin:1,keep:1} },
+  { name: "Jimmy Neesham", nationality: "OV", role: "All-rounder", attrs: {bat:6,pow:8,fin:8,bowl:6,pace:7,spin:1,keep:1} },
 
   // Afghanistan
   { name: "Rashid Khan", nationality: "OV", role: "All-rounder", attrs: {bat:6,pow:7,fin:8,bowl:10,pace:1,spin:10,keep:1} },
@@ -118,12 +159,18 @@ const REAL_PLAYERS = [
   { name: "Matheesha Pathirana", nationality: "OV", role: "Fast Bowler", attrs: {bat:1,pow:1,fin:1,bowl:9,pace:10,spin:1,keep:1} },
   { name: "Maheesh Theekshana", nationality: "OV", role: "Spinner", attrs: {bat:3,pow:2,fin:1,bowl:8,pace:1,spin:9,keep:1} },
   { name: "Kusal Mendis", nationality: "OV", role: "Wicketkeeper", attrs: {bat:8,pow:8,fin:8,bowl:1,pace:1,spin:1,keep:8} },
+  { name: "Dasun Shanaka", nationality: "OV", role: "All-rounder", attrs: {bat:6,pow:8,fin:8,bowl:5,pace:7,spin:1,keep:1} },
 
 
   // Pakistan / Bangladesh
   { name: "Shakib Al Hasan", nationality: "OV", role: "All-rounder", attrs: {bat:8,pow:6,fin:6,bowl:8,pace:2,spin:9,keep:1} },
   { name: "Mustafizur Rahman", nationality: "OV", role: "Fast Bowler", attrs: {bat:2,pow:1,fin:1,bowl:8,pace:7,spin:1,keep:1} }
+
+  // Zimbabwe
+  { name: "Sikandar Raza", nationality: "OV", role: "All-rounder", attrs: {bat:7,pow:8,fin:8,bowl:8,pace:6,spin:9,keep:1} },
 ];
+
+
 
 const ROLES = [
   { key: "Opener", icon: "🏏" },
