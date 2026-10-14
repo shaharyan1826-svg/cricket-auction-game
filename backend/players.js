@@ -164,7 +164,7 @@ const REAL_PLAYERS = [
 
   // Pakistan / Bangladesh
   { name: "Shakib Al Hasan", nationality: "OV", role: "All-rounder", attrs: {bat:8,pow:6,fin:6,bowl:8,pace:2,spin:9,keep:1} },
-  { name: "Mustafizur Rahman", nationality: "OV", role: "Fast Bowler", attrs: {bat:2,pow:1,fin:1,bowl:8,pace:7,spin:1,keep:1} }
+  { name: "Mustafizur Rahman", nationality: "OV", role: "Fast Bowler", attrs: {bat:2,pow:1,fin:1,bowl:8,pace:7,spin:1,keep:1} },
 
   // Zimbabwe
   { name: "Sikandar Raza", nationality: "OV", role: "All-rounder", attrs: {bat:7,pow:8,fin:8,bowl:8,pace:6,spin:9,keep:1} },
