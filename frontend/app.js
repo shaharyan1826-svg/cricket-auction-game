@@ -126,7 +126,12 @@ function renderLot() {
     <div class="block">
       <div class="lot">🔨 LOT ${idx + 1} / ${total}${state.phase === "unsold-round" ? " · UNSOLD ROUND" : ""}</div>
       <div class="player-portrait">
-        <img src="${p.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(p.name)}&background=879B83&color=202A25&size=256&bold=true`}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Player&background=879B83&color=202A25&size=256';" />
+       <img
+          src="${p.imageUrl || p.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(p.name)}&background=5B1726&color=FFF8E7&size=256&bold=true`}"
+          alt="${p.name}"
+          loading="eager"
+          onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(p.name)}&background=5B1726&color=FFF8E7&size=256';"
+        />
       </div>
       <span class="role-icon">${p.icon}</span>
       <h3>${p.name}</h3>
