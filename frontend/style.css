@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --pitch: #202A25;
-  --pitch-2: #2D3831;
-  --panel: #354139;
-  --panel-solid: #354139;
-  --line: #59665B;
-  --cream: #F2F0E8;
-  --cream-dim: #B8B8AD;
-  --gold: #C8753D;
-  --gold-bright: #D99562;
-  --sold: #879B83;
-  --unsold: #C65D50;
+  /* Cosmic Latte + Mocha Cream + Deep Burgundy */
+  --pitch: #FFF8E7;
+  --pitch-2: #EDE0CC;
+  --panel: #F5E9D7;
+  --panel-solid: #F5E9D7;
+  --line: #D8C3A5;
+  --cream: #2B211D;
+  --cream-dim: #6F5B50;
+  --gold: #5B1726;
+  --gold-bright: #7B3042;
+  --sold: #526B50;
+  --unsold: #A63246;
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --cosmic-latte: #FFF8E7;
+  --mocha-cream: #D8C3A5;
+  --deep-burgundy: #5B1726;
+  --dark-mocha: #2B211D;
+  --burgundy-light: #7B3042;
 }
 
 * { box-sizing: border-box; }
@@ -423,4 +429,161 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px s
   .wrap { padding: 1rem .8rem 2rem; }
   .panel { padding: 1rem; }
   nav.tabs { gap: .8rem; }
+}
+
+
+/* =========================================================
+   Cosmic Latte + Mocha Cream + Deep Burgundy theme overrides
+   Preserves existing auction layout and component styles.
+   ========================================================= */
+html,
+body {
+  background: var(--cosmic-latte);
+  color: var(--dark-mocha);
+}
+
+.site-header,
+.panel,
+.squad-card,
+.team-paddle {
+  border-color: var(--mocha-cream);
+}
+
+.panel,
+.squad-card,
+.team-paddle {
+  background: var(--panel);
+}
+
+.site-header h1,
+.block h3,
+.panel h2,
+.squad-card h4 {
+  color: var(--deep-burgundy);
+}
+
+.site-header h1 em {
+  color: var(--deep-burgundy);
+}
+
+nav.tabs button.active {
+  color: var(--deep-burgundy);
+  border-bottom-color: var(--deep-burgundy);
+}
+
+input,
+select {
+  background: #FFFCF5;
+  color: var(--dark-mocha);
+  border-color: var(--mocha-cream);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--deep-burgundy);
+}
+
+.btn {
+  border-color: var(--deep-burgundy);
+  color: var(--deep-burgundy);
+}
+
+.btn:hover,
+.btn.primary {
+  background: var(--deep-burgundy);
+  color: var(--cosmic-latte);
+}
+
+.btn.primary:hover {
+  background: var(--burgundy-light);
+}
+
+.block {
+  background: linear-gradient(145deg, #F5E9D7, #E8D5BC);
+  border-color: var(--mocha-cream);
+  color: var(--dark-mocha);
+}
+
+.block::before {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(91, 23, 38, 0.10),
+    transparent 65%
+  );
+}
+
+.block .lot,
+.block .base-price {
+  color: var(--deep-burgundy);
+}
+
+.block .base-price {
+  border-color: var(--deep-burgundy);
+}
+
+.block .role-line,
+.hint,
+.strengths,
+.rating-item,
+.squad-card .stat-line {
+  color: var(--cream-dim);
+}
+
+.attr .bar,
+.rating-item .bar {
+  background: var(--mocha-cream);
+}
+
+.attr .bar > span,
+.rating-item .bar > span {
+  background: var(--deep-burgundy);
+}
+
+th {
+  color: var(--deep-burgundy);
+}
+
+.error-msg {
+  color: #7D1728;
+  background: #F8E0DF;
+}
+
+.computer-settings {
+  background: #F5E9D7;
+  border-color: var(--mocha-cream);
+}
+
+.player-portrait {
+  background: var(--mocha-cream);
+  border-color: var(--line);
+}
+
+.player-portrait img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.xi-option {
+  border-color: var(--line);
+}
+
+.xi-option input {
+  accent-color: var(--deep-burgundy);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline-color: var(--burgundy-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
